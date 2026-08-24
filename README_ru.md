@@ -1,4 +1,4 @@
-Проект створено на бaзi
+Проект создан на бaзе
 
 https://github.com/LU6APR/ESP32_C3_MINI_MORSE_TRAINER
 
