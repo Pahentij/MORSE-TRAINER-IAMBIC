@@ -1,5 +1,4 @@
-Проєкт створено на основі
-
+Проєкт створено на основі:
 https://github.com/LU6APR/ESP32_C3_MINI_MORSE_TRAINER
 
 # MORSE TRAINER IAMBIC — LU6APR
