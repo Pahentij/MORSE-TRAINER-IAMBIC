@@ -1,5 +1,4 @@
-Проект створено на бaзi
-
+Project based on:
 https://github.com/LU6APR/ESP32_C3_MINI_MORSE_TRAINER
 
 # MORSE TRAINER IAMBIC — LU6APR — Nokia 5110 v4
