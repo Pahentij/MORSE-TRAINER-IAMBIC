@@ -77,6 +77,9 @@ struct KeyerSettings {
   bool displayRotated;
 };
 
+// ============================================================
+// DEFAULT SETTINGS
+// ============================================================
 KeyerSettings settings = {15, true, false, true, 600, true, 100, 50, false};
 
 // false = international Morse / Latin, true = Russian Morse / Cyrillic.
