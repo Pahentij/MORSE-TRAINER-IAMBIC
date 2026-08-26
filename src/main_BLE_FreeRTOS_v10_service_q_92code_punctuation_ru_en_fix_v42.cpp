@@ -65,6 +65,9 @@ constexpr uint8_t STATUS_X_LANG = 72;
 // ============================================================
 // SETTINGS
 // ============================================================
+// Default display settings — change only this line when needed.
+constexpr uint8_t DEFAULT_BACKLIGHT_PERCENT = 50, DEFAULT_CONTRAST_PERCENT = 65;
+
 struct KeyerSettings {
   uint8_t speedWPM;
   bool iambicModeA;
@@ -80,7 +83,7 @@ struct KeyerSettings {
 // ============================================================
 // DEFAULT SETTINGS
 // ============================================================
-KeyerSettings settings = {15, true, false, true, 600, true, 100, 50, false};
+KeyerSettings settings = {15, true, false, true, 600, true, DEFAULT_BACKLIGHT_PERCENT, DEFAULT_CONTRAST_PERCENT, false};
 
 // false = international Morse / Latin, true = Russian Morse / Cyrillic.
 // A language selector is required because many codes are identical.
@@ -2859,7 +2862,7 @@ void setup() {
       settings.backlightPercent > 100 ||
       settings.contrastPercent < 50 || settings.contrastPercent > 100 ||
       settings.displayRotated > 1) {
-    settings = {15, true, false, true, 600, true, 100, 50};
+    settings = {15, true, false, true, 600, true, DEFAULT_BACKLIGHT_PERCENT, DEFAULT_CONTRAST_PERCENT, false};
   }
 
   uint8_t storedLanguage = 0xFF;
