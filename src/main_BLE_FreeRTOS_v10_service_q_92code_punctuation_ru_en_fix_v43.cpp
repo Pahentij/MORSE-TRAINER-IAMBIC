@@ -1898,7 +1898,7 @@ void printMorseCodesPageSerial() {
       break;
 
     case 7: {
-      serialPrintlnMirror("SERVICE CODES - 3 LETTER");
+      serialPrintlnMirror("SERVICE CODES - 3 LETTERS");
       char line[96];
       uint8_t column = 0;
 
@@ -1933,7 +1933,7 @@ void printMorseCodesPageSerial() {
     }
 
     case 8: {
-      serialPrintlnMirror("SERVICE CODES - 2 LETTER / 92");
+      serialPrintlnMirror("SERVICE CODES - 2 LETTERS / 92");
 
       for (size_t i = 0; i < SERVICE_CODE_COUNT; i++) {
         ServiceCode sc;
