@@ -1825,7 +1825,7 @@ void printMorseCodesPageSerial() {
     case 0:
       serialPrintlnMirror("MORSE CODES - EN");
       serialPrintlnMirror("A .-    I ..    Q --.-");
-      serialPrintlnMirror("B -...  J .--.  R .-.");
+      serialPrintlnMirror("B -...  J .---  R .-.");
       serialPrintlnMirror("C -.-.  K -.-   S ...");
       serialPrintlnMirror("D -..   L .-..  T -");
       serialPrintlnMirror("E .     M --    U ..-");
@@ -1843,23 +1843,23 @@ void printMorseCodesPageSerial() {
 
     case 2:
       serialPrintlnMirror("MORSE CODES - RU");
-      serialPrintlnMirror("А .-    И -.   Р --.");
-      serialPrintlnMirror("Б ---.  Й ---  С --.");
-      serialPrintlnMirror("В --    К --   Т -");
-      serialPrintlnMirror("Г --.   Л ---. У --");
-      serialPrintlnMirror("Д --.   М --   Ф ---.");
-      serialPrintlnMirror("Е .     Н -.   Х ---.");
-      serialPrintlnMirror("Ж ---   О --   Ц ---.");
-      serialPrintlnMirror("З ---.  П ---. Ч ---.");
+      serialPrintlnMirror("А .-    И ..   Р .-.");
+      serialPrintlnMirror("Б -...  Й .--- С ...");
+      serialPrintlnMirror("В .--   К -.-  Т -");
+      serialPrintlnMirror("Г --.   Л .-.. У ..-");
+      serialPrintlnMirror("Д -..   М --   Ф ..-.");
+      serialPrintlnMirror("Е .     Н -.   Х ....");
+      serialPrintlnMirror("Ж ...-  О ---  Ц -.-.");
+      serialPrintlnMirror("З --..  П .--. Ч ---.");
       serialPrintlnMirror("");
       break;
 
     case 3:
       serialPrintlnMirror("MORSE CODES - RU");
-      serialPrintlnMirror("Ш ---  Ь ---");
-      serialPrintlnMirror("Щ ---  Э ----.");
-      serialPrintlnMirror("Ъ ---- Ю ---");
-      serialPrintlnMirror("Ы ---  Я ---");
+      serialPrintlnMirror("Ш ----  Э ..-..");
+      serialPrintlnMirror("Щ --.-  Ю ..--");
+      serialPrintlnMirror("ЪЬ -..- Я .-.-");
+      serialPrintlnMirror("Ы -.--  ");
       serialPrintlnMirror("");
       break;
 
@@ -1972,14 +1972,14 @@ void drawMorseCodesMenu() {
 
     case 0: {
       const char* lines[] = {
-        "A .-    I ..    Q --.-",
-        "B -...  J .--.  R .-.",
-        "C -.-.  K -.-   S ...",
-        "D -..   L .-..  T -",
-        "E .     M --    U ..-",
-        "F ..-.  N -.    V ...-",
-        "G --.   O ---   W .--",
-        "H ....  P .--.  X -..-"
+        "A .-    I ..   Q --.-",
+        "B -...  J .--- R .-.",
+        "C -.-.  K -.-  S ...",
+        "D -..   L .-.. T -",
+        "E .     M --   U ..-",
+        "F ..-.  N -.   V ...-",
+        "G --.   O ---  W .--",
+        "H ....  P .--. X -..-"
       };
       for (uint8_t i = 0; i < 8; i++)
         lcd.drawStr(0, 6 + i * 6, lines[i]);
@@ -1992,14 +1992,14 @@ void drawMorseCodesMenu() {
 
     case 2: {
       const char* lines[] = {
-        "А .-    И -.   Р --.",
-        "Б ---.  Й ---  С --.",
-        "В --    К --   Т -",
-        "Г --.   Л ---. У --",
-        "Д --.   М --   Ф ---.",
-        "Е .     Н -.   Х ---.",
-        "Ж ---   О --   Ц ---.",
-        "З ---.  П ---. Ч ---."
+        "А .-    И ..   Р .-.",
+        "Б -...  Й .--- С ...",
+        "В .--   К -.-  Т -",
+        "Г --.   Л .-.. У ..-",
+        "Д -..   М --   Ф ..-.",
+        "Е .     Н -.   Х ....",
+        "Ж ...-  О ---  Ц -.-.",
+        "З --..  П .--. Ч ---."
       };
       for (uint8_t i = 0; i < 8; i++)
         lcd.drawUTF8(0, 6 + i * 6, lines[i]);
@@ -2008,10 +2008,10 @@ void drawMorseCodesMenu() {
 
     case 3: {
       const char* lines[] = {
-        "Ш ---  Ь ---",
-        "Щ ---  Э ----.",
-        "Ъ ---- Ю ---",
-        "Ы ---  Я ---"
+        "Ш ----   Э ..-..",
+        "Щ --.-   Ю ..--",
+        "ЪЬ -..-  Я .-.-",
+        "Ы -.--   "
       };
       for (uint8_t i = 0; i < 4; i++)
         lcd.drawUTF8(0, 6 + i * 6, lines[i]);
@@ -2034,13 +2034,13 @@ void drawMorseCodesMenu() {
     case 5: {
       const char* lines[] = {
         "PUNCTUATION RU",
-        "'.' ...... ',' .-.-.-",
-        "':' ---... ';' -.-.-.",
-        "'?' ..--.. '!' --..--",
-        "'\"' .-..-. ''' .----.",
-        "'(' -.--.  ')' -.--.-",
-        "'/' -..-.  '-' -....-",
-        "'=' -...-  '@' .--.-."
+        ". ......   , .-.-.-",
+        ": ---...   ; -.-.-.",
+        "? ..--..   ! --..--",
+        "\" .-..-.   ' .----.",
+        "( -.--.    ) -.--.-",
+        "/ -..-.    - -....-",
+        "= -...-    @ .--.-."
       };
       for (uint8_t i = 0; i < 8; i++)
         lcd.drawStr(0, 6 + i * 6, lines[i]);
@@ -2050,13 +2050,13 @@ void drawMorseCodesMenu() {
     case 6: {
       const char* lines[] = {
         "PUNCTUATION EN",
-        "'.' .-.-.- ',' --..--",
-        "':' ---... ';' -.-.-.",
-        "'?' ..--.. '!' -.-.--",
-        "'\"' .-..-  ''' .----",
-        "'(' -.--.- ')' -.--.-",
-        "'/' -..-.  '-' -....-",
-        "'=' -...-  '@' .--.-."
+        ". .-.-.-   , --..--",
+        ": ---...   ; -.-.-.",
+        "? ..--..   ! -.-.--",
+        "\" .-..-.   ' .----.",
+        "( -.--.-   ) -.--.-",
+        "/ -..-.    - -....-",
+        "= -...-    @ .--.-."
       };
       for (uint8_t i = 0; i < 8; i++)
         lcd.drawStr(0, 6 + i * 6, lines[i]);
