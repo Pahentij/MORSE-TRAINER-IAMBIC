@@ -372,8 +372,8 @@ uint8_t menuScroll = 0;
 // 4 — digits
 // 5 — punctuation RU
 // 6 — punctuation EN
-// 7 — service codes: 3-letter
-// 8 — service codes: 2-letter and 92 codes.
+// 7 — service codes: 3-letters
+// 8 — service codes: 2-letters and 92 codes.
 uint8_t morseCodesPage = 0;
 
 constexpr uint8_t MORSE_CODES_LAST_PAGE = 8;
