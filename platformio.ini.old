@@ -1,0 +1,12 @@
+[env:lolin_c3_mini]
+platform = espressif32
+board = lolin_c3_mini
+framework = arduino
+monitor_speed = 115200
+
+lib_deps =
+    olikraus/U8g2
+    NimBLE-Arduino
+
+build_flags =
+    -DARDUINO_USB_CDC_ON_BOOT=1
