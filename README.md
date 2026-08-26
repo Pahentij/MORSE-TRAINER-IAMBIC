@@ -1,11 +1,9 @@
 Project based on:
 https://github.com/LU6APR/ESP32_C3_MINI_MORSE_TRAINER
 
-# MORSE TRAINER IAMBIC — LU6APR — Nokia 5110 v4
+# MORSE TRAINER IAMBIC — LU6APR — Nokia 5110 display
 
-This version ports the verified LCD 2004 v8 logic to the separately tested Nokia 5110 / PCD8544 display.
-
-## Preserved v8 behavior
+## Preserved behavior
 
 - Iambic Keyer
 - DIT GPIO2
@@ -40,17 +38,14 @@ This version ports the verified LCD 2004 v8 logic to the separately tested Nokia
 Do not connect the display VCC to 5V.
 
 ## Display
-
 PCD8544 84x48, U8g2 full buffer, software SPI. The font is `u8g2_font_5x7_t_cyrillic`.
 The first three display rows are used for decoded CW text. Fourteen 5x7 cells fit across 84 pixels. The bottom row is used for `WPM Iambic A/B`.
 
 ## Cyrillic
-
 The decoder contains Russian Cyrillic А-Я in addition to Latin letters, numbers and punctuation. Ё is not decoded separately because its common Morse representation is identical to Е and therefore cannot be distinguished from Е by the received Morse sequence.
 
 
-## v5 additions
-
+## additions
 Menu navigation and selection now have audible feedback using the existing
 sidetone output. Navigation is 800 Hz; COMMAND selection is 1200 Hz.
 
@@ -69,8 +64,7 @@ alone.
 - Manual screen clear by short COMMAND press gives a 1000 Hz confirmation beep when sidetone is enabled.
 
 
-## Display layout v10
-
+## Display layout
 The Nokia 5110 display uses four compact text rows plus a dedicated status row.
 
 ```text
@@ -87,8 +81,7 @@ The automatic text-buffer clear therefore occurs after the fourth text row
 is filled.
 
 
-## Text buffer v11
-
+## Text buffer
 The display uses four text rows of 14 characters (56 positions) plus the
 independent status row.
 
@@ -100,8 +93,7 @@ the first character of a new screen is never lost.
 Automatic word-space insertion never adds a leading space to a new screen.
 
 
-## Start / clear workflow v12
-
+## Start
 After startup, the first text row displays centered `>READY<`.
 Decoded Morse input starts on row 2 and uses rows 2-4.
 
@@ -117,8 +109,7 @@ A short `PIN_COMMAND` press outside the waiting state retains the existing
 manual screen-clear behavior and its confirmation beep.
 
 
-## Iambic A/B keyer state machine v13
-
+## Iambic A/B keyer state machine
 The keyer state machine was replaced independently of the display, decoder,
 menu, EEPROM and command logic.
 
@@ -140,8 +131,7 @@ completes the current element on release; Mode B sends one additional opposite
 element on release. Source: https://www.morsecode.nl/modeab.pdf
 
 
-## Clear screen mode v14
-
+## Clear screen mode
 The settings menu contains `Clear screen` with two modes:
 
 - `AUTO` — the text area is cleared automatically as soon as it becomes full.
