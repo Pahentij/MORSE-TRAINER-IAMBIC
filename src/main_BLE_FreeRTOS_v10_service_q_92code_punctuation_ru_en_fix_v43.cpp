@@ -1,12 +1,10 @@
 /*
-  MORSE TRAINER IAMBIC — LU6APR
+  MORSE TRAINER IAMBIC
+  Original code - LU6APR https://github.com/LU6APR/ESP32_C3_MINI_MORSE_TRAINER
   PlatformIO / VS Code
   Nokia 5110 / PCD8544 version
 
-  Based on the verified Nokia 5110 v8 logic. The keyer, COMMAND button,
-  menu navigation, WPM, Iambic A/B, EEPROM, sidetone and decoder timing
-  are preserved. Only the display layer and decoded character type are
-  changed for the Nokia 5110.
+
 */
 
 // ============================================================
@@ -1788,7 +1786,7 @@ void printAboutSerial() {
   serialPrintlnMirror("");
   serialPrintlnMirror("Moдифiкaцiя коду:");
   serialPrintlnMirror("Павло Лузан");
-  serialPrintlnMirror("pahentij@gmail.com");
+  serialPrintlnMirror("https://github.com/Pahentij/MORSE-TRAINER-IAMBIC");
   serialPrintlnMirror("");
   serialPrintlnMirror("2026");
   serialPrintlnMirror("");
@@ -1801,11 +1799,11 @@ void drawAboutMenu() {
   lcd.drawStr(0, 6,   "~~~~~~~~~~~~~~~~~~~~~");
   lcd.drawUTF8(3, 9,  "Телеграфний тренажер");
   lcd.drawUTF8(0, 17, "Автори:");
-  lcd.drawUTF8(1, 23, "<-> github.com/LU6APR");
-  lcd.drawUTF8(1, 29, "<->       Павло Лузан");
+  lcd.drawUTF8(1, 23, "    github.com/LU6APR");
+  lcd.drawUTF8(1, 29, "  github.com/Pahentij");
 //  lcd.drawUTF8(0, 36, "");
   lcd.drawUTF8(0, 39, "Бiльшe - y Serial LOG");
-  lcd.drawUTF8(1, 45, "Pahentij (c)     2026");
+  lcd.drawUTF8(1, 45, "Pahentij         2026");
   lcd.drawStr(0, 51,  "~~~~~~~~~~~~~~~~~~~~~");
 
   lcd.sendBuffer();
